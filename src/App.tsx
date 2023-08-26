@@ -15,11 +15,20 @@ function App() {
       return;
   }
 
+  function insertMinus() {
+    var searchText = (document.getElementById('APjFqb') as HTMLInputElement);
+
+      if (searchText) {
+        searchText.value += " -";  
+      }
+      return;
+  }
+
   return (
     <div className='App'>
       <div>
         <Button startIcon={<CompareIcon/>} onClick={insertOR}/>
-        <Button startIcon={<RemoveIcon/>}/>
+        <Button startIcon={<RemoveIcon/>} onClick={insertMinus}/>
       
       </div>
 

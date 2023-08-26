@@ -1,11 +1,11 @@
 {
   "manifest_version": 3,
-  "name": "Writesonic",
-  "description": "Writesonic Chrome Extension",
+  "name": "specsearch",
+  "description": "specsearch",
   "version": "1.0.0",
   "content_scripts": [
     {
-      "matches": ["<all_urls>"],
+      "matches": ["http://*.google.com/*", "https://*.google.com/*"],
       "js": ["/assets/js/initializeUI.js"],
       "run_at": "document_end",
       "all_frames": true
@@ -14,7 +14,7 @@
   "web_accessible_resources": [
     {
       "resources": ["/react/index.js", "/react/vendor.js", "/react/index.css"],
-      "matches": ["<all_urls>"]
+      "matches": ["http://*.google.com/*", "https://*.google.com/*"]
     }
   ]
 }
